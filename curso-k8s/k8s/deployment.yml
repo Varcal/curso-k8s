@@ -16,7 +16,11 @@ spec:
     spec:
       containers:
         - name: goserver
-          image: varcal/hello-go:v3
+          image: varcal/hello-go:v4
           ports:
             - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: goserver-env
+        
 
